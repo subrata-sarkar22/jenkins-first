@@ -3,6 +3,7 @@ pipeline {
     parameters{
         string(name: 'TEXT', description: 'Enter the sting to be printed out on consol', defaultValue: 'Hello World')
         string(name: 'STAGE_NAME', description: 'Enter the stage name', defaultValue: '')
+		booleanParam(name: 'TEXT_CHECK', description: 'Enter the stage name', defaultValue: true)
     }
     stages {
         stage("Stage1") {			
