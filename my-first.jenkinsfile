@@ -7,8 +7,12 @@ pipeline {
     stages {
         stage("Stage1") {			
             steps {
-				echo "${params.STAGE_NAME}"
-                echo "${params.TEXT}"
+                echo "This outout is from stage 1 -- > ${params.TEXT}"
+            }
+        }
+		stage("Stage2") {			
+            steps {
+				echo "This outout is from stage 2 -- > ${params.STAGE_NAME}"
             }
         }
     }
