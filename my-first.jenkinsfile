@@ -5,9 +5,9 @@ pipeline {
         string(name: 'STAGE_NAME', description: 'Enter the stage name', defaultValue: '')
     }
     stages {
-        stage("Stage1") {
-			echo "${params.STAGE_NAME}"
+        stage("Stage1") {			
             steps {
+				echo "${params.STAGE_NAME}"
                 echo "${params.TEXT}"
             }
         }
