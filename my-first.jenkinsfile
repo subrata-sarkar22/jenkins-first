@@ -1,0 +1,14 @@
+pipeline {
+    agent any
+    parameters{
+        string(name: 'TEXT', description: 'Enter the sting to be printed out on consol', defaultValue: 'Hello World'),
+        string(name: 'STAGE_NAME', description: 'Enter the stage name', defaultValue: '')
+    }
+    stages {
+        stage("${params.STAGE_NAME}") {
+            steps {
+                echo "${params.TEXT}"
+            }
+        }
+    }
+}
